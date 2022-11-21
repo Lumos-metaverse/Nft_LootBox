@@ -1,5 +1,7 @@
 import axios from "axios";
 import Link from "next/link";
+import { useWeb3 } from "@3rdweb/hooks"
+const { address } = useWeb3();
 import { FormEvent, useState } from "react";
 import {
   CheckAnswerPayload,
@@ -24,20 +26,32 @@ export default function QuizQuestion({
   image,
   answers,
   nextQuestionFunction,
-}: Props) {
+}: Props) 
+{
   const [answerIndex, setAnswerIndex] = useState<number | undefined>(undefined);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | undefined>(undefined);
-  const [answerResult, setAnswerResult] = useState<AnswerResult | undefined>(
-    undefined
-  );
-  const [correctAnswerWas, setCorrectAnswerWas] = useState<number | undefined>(
-    undefined
-  );
+  const [answerResult, setAnswerResult] = useState<AnswerResult | undefined>(undefined);
+  const [correctAnswerWas, setCorrectAnswerWas] = useState<number | undefined>(undefined);
+  const { address, provider } = useWeb3();
+  const message = "Please sign this message to confirm your identity and submit the answer.This won't cost any gas!"
+  const signedMessage = await provider.getSigner().signMessage(message)
+
+const payload: CheckAnswerPayload = {
+  questionIndex,
+  answerIndex,
+  message,
+  signedMessage,
+}; 
+
+  if (!address) {
+    return <p>Please connect your wallet to take the quiz!</p>
+  }
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
+    invariant(provider !== undefined, "Provider must be defined to submit an answer")
 
     try {
       invariant(
@@ -46,9 +60,14 @@ export default function QuizQuestion({
       );
 
       const payload: CheckAnswerPayload = {
+        address,
         questionIndex,
         answerIndex,
       };
+
+ 
+      
+ 
 
       const checkResponse = await axios.post("/api/check-answer", payload);
       const result = checkResponse.data as CheckAnswerResponse;

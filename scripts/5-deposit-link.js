@@ -2,7 +2,7 @@ import { ethers } from "ethers";
 import { sdk } from "./helpers.js";
 
 async function main() {
-  const packModuleAddress = '0x0A93C4F5313C7b12643F882b11645505A71200fE'; // your pack module address
+  const packModuleAddress = '0xAFEb95CED8873306Cd00EB07134c31CFaE7f30c1'; // your pack module address
   const packModule = sdk.getPackModule(packModuleAddress);
 
   console.log('Depositing link...')

@@ -2,10 +2,10 @@ import { readFileSync } from 'fs';
 import { sdk } from './helpers.js';
 
 async function main() {
-  const bundleModuleAddress = '0xD013bE1F542E4f2Ce0c6e51014306e97C46Dbb4D'; // your bundle module address
+  const bundleModuleAddress = '0x580665cb607a9fc353773ee52e3d316f3c9167b7'; // your bundle module address
   const bundleModule = sdk.getBundleModule(bundleModuleAddress);
 
-  const packModuleAddress = '0x0A93C4F5313C7b12643F882b11645505A71200fE'; // your pack module address
+  const packModuleAddress = '0xAFEb95CED8873306Cd00EB07134c31CFaE7f30c1'; // your pack module address
   const packModule = sdk.getPackModule(packModuleAddress);
 
   console.log('Getting all NFTs from bundle...');

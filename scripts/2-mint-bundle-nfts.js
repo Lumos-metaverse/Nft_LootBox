@@ -3,7 +3,7 @@ import { sdk } from './helpers.js';
 
 async function main() {
   // Paste in the address from when you created the bundle collection module
-  const bundleModuleAddress = '0xD013bE1F542E4f2Ce0c6e51014306e97C46Dbb4D';
+  const bundleModuleAddress = '0x580665cb607a9fc353773ee52e3d316f3c9167b7';
   const bundleModule = sdk.getBundleModule(bundleModuleAddress);
 
   console.log('Creating NFT batch...');
