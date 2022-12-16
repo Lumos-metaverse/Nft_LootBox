@@ -1,27 +1,71 @@
-# Next.js + Tailwind CSS Example
+# Voting Platform on Polygon
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+This repository contains the code for a full-stack quiz app that rewards correct answers with lootboxes that can be opened to reveal fancy NFTs! 
+## Getting Started
 
-## Preview
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+## Prerequisites
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+### - [Node.js](https://nodejs.org/)
+### - [Npm](https://www.npmjs.com/)
+### - [MetaMask](https://metamask.io/)
 
-## Deploy your own
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+## Installing
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
+### 1. Clone the repository to your local machine:
+```
+git clone https://github.com/Lumos-metaverse/Nft_LootBox.git
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+### 2. Install the dependencies:
+```
+npm install
+```
+
+### 3. Start the local development server:
+```
+npm run dev
+```
+
+## Built With
+
+### - [Node.js](https://nodejs.org/)
+### - [npm](https://www.npmjs.com/)
+### - [thirdweb](https://github.com/nftlabs/nftlabs-sdk-ts)
+### - [Polygon](https://www.polygon.technology/)
+
+## Contributing
+
+If you would like to contribute to the project, please follow these guidelines:
+
+1. Fork the repository
+2. Create a branch for your feature
+3. Submit a pull request for review
+
+## Ways To Contribute 
+
+There are many ways in which you can contribute. An example would be
+
+a) Enhancing the user interface 
+
+b) Expanding the chain 
+
+c) Using wallet connect instead of metamask injector to improve the user experience.
+
+Feel free to suggest a change.
+
+## Sneak Peak
+
+![image](https://user-images.githubusercontent.com/28181759/208119041-4c468797-d548-4f1d-a6c6-81193d609392.png)
+![image](https://user-images.githubusercontent.com/28181759/208119088-a8b6c0b1-4009-4284-8c6a-55dcde80f33a.png)
+
+
+## References
+
+https://www.pointer.gg/tutorials/thirdweb-nft-lootbox/ea2269a6-a5d0-44e0-9724-8887923f82df
+
+## Authors
+Lumos Metaverse - [Lumos-metaverse](https://github.com/Lumos-metaverse)
+
